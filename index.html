@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
+        rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>RefundPage</title>
+</head>
+
+<body>
+    <main>
+        <header>
+            <img 
+                src="./assets/logo/logo.svg" 
+                alt="logo" style=" grid-area: header;">
+        </header>
+
+        <form class="card-container" style=" grid-area: card-a;">
+            <h1>
+                Refund Request
+            </h1>
+            <p>
+                Please provide expense details to request reimbursement.
+                The expense will be reviewed and reimbursed within 30 days.
+            </p>
+            
+            <div id="grid-input">
+                <fieldset style=" grid-area: A; ">
+                    <legend for="expense">Expense Title</legend>
+                    <input 
+                        type="text"
+                        name="expense"
+                        id="expense"
+                        
+                    />
+                </fieldset>
+
+                <fieldset style=" grid-area: B; ">
+                    <legend>Category</legend>
+                    <select id="category" name="category" required>
+                        <option value="" disabled selected hidden>Select</option>
+                        <option value="food">Food</option>
+                        <option value="accommodation">Accommodation</option>
+                        <option value="services">Services</option>
+                        <option value="transport">Transportation</option>
+                        <option value="other">Other</option>
+                    </select>
+                    </fieldset>
+
+                <fieldset style=" grid-area: C; ">
+                    <legend>Expense amount</legend>
+                    <input
+                        type="text"
+                        name="amount"
+                        id="amount"
+                        placeholder="R$ 0,00"
+                        
+                    />
+                </fieldset>
+            </div>
+
+            <button type="submit">Add Expense</button>
+        </form>
+
+        <aside class="card-container" style=" grid-area: card-b;">
+            <header>
+                <h2>
+                    My Requests <i>&bullet;</i>
+                    <span>0 expenses</span>
+                </h2>
+
+                <h3>
+                    <small>R$</small>
+                    0,00
+                </h3>
+            </header>
+
+            <ul>
+                <li>
+                    <img id="icon" src="./assets/icons/food.svg" alt="Type of expense Icon">
+
+                    <div class="expense-info">
+                        <strong>Lunch</strong>
+                        <span>Food</span>
+                    </div>
+
+                    <span class="expense-amount">
+                        <small>R$</small>
+                        1.420,57
+                    </span>
+
+                    <img id="close" src="./assets/icons/X-Bold.svg" alt="X Close Button">
+                </li>
+            </ul>
+        </aside>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
